@@ -25,7 +25,6 @@
 
     Public Function from10(ByVal num As Integer, ByVal nTo As Integer) As String
         If nTo <= validChars.Length Then
-            'Return Convert.ToString(num, nTo)
             Dim s As String = ""
             Dim i As Integer
             Do
