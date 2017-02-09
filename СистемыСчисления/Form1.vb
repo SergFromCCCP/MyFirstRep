@@ -1,18 +1,10 @@
 ﻿Public Class Form1
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim n As Integer = txtNum.Text
-        Dim nTo As Integer = txtTo.Text
-        txtRez.Text = from10(n, nTo)
+
+    Private Sub numFrom_ValueChanged(sender As Object, e As EventArgs) Handles numTo.ValueChanged, numFrom.ValueChanged, вход.TextChanged
+        рез.Text = FromTo(вход.Text, numFrom.Value, numTo.Value)
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim n As String = txtRez.Text
-        Dim nTo As Integer = txtTo2.Text
-        txtRez2.Text = to10(n, nTo)
-
-    End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        рез.Text = FromTo(вход.Text, основание1.Text, основание2.Text)
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        Close()
     End Sub
 End Class

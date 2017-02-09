@@ -12,15 +12,15 @@
 
     Public Function FromTo(ByVal num As String, ByVal nFrom As Integer, ByVal nTo As Integer) As String
         If Math.Min(nFrom, nTo) < 2 OrElse Math.Max(nFrom, nTo) > validChars.Length Then
-            MessageBox.Show("Неправильное основание", "Ошибка системы счисления",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return ""
+            'MessageBox.Show("Неправильное основание", "Ошибка системы счисления",
+            '                MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return "Неправильное основание"
         End If
         If isValidNumber(num, nFrom) Then
             Return from10(to10(num.ToUpper, nFrom), nTo)
         Else
-            MessageBox.Show("Ошибка входного числа")
-            Return ""
+            'MessageBox.Show("Ошибка входного числа")
+            Return "Ошибка входного числа"
         End If
     End Function
 
