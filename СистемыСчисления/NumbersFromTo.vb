@@ -12,7 +12,8 @@
 
     Public Function FromTo(ByVal num As String, ByVal nFrom As Integer, ByVal nTo As Integer) As String
         If Math.Min(nFrom, nTo) < 2 OrElse Math.Max(nFrom, nTo) > validChars.Length Then
-            MessageBox.Show("Ошибка системы счисления")
+            MessageBox.Show("Неправильное основание", "Ошибка системы счисления",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return ""
         End If
         If isValidNumber(num, nFrom) Then
